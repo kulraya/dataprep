@@ -1,14 +1,4 @@
-df_parameter = spark.createDataFrame([["1"]],["id"])\
-    .withColumn("bck1mth",date_format((add_m
 
-from datetime import datetime, timedelta
-import calendar
-
-# Function to subtract a month from the current date and format it
-def subtract_one_month(current_date):
-    first_day_this_month = current_date.replace(day=1)
-    last_day_last_month = first_day_this_month - timedelta(days=1)
-    return last_day_last_month
 
 # Current date
 current_date = datetime.now()
