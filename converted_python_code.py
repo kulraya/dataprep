@@ -1,12 +1,5 @@
 df_parameter = spark.createDataFrame([["1"]],["id"])\
-    .withColumn("bck1mth",date_format((add_months(current_date(),-1)), "yyyyMM").cast('int'))\
-    .withColumn("first_bck1mth",date_format((add_months(current_date(),-1)), "yyyyMMdd").cast('int'))\
-        .collect()
-bck1mth = [i[1] for i in df_parameter]
-bck1mth_date = [i[2] for i in df_parameter]                                       
-print(bck1mth, bck1mth_date)
-[202401] [20240101]
-
+    .withColumn("bck1mth",date_format((add_m
 
 from datetime import datetime, timedelta
 import calendar
